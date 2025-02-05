@@ -1,0 +1,22 @@
+{
+  "name": "miss-bug",
+  "version": "1.0.0",
+  "description": "MissBug is a bug management system, it allows users to add / remove and update bugs.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --ignore './data' server.js"
+  },
+  "author": "Ofir Gady",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "pdfkit": "^0.16.0",
+    "rimraf": "^6.0.1"
+  }
+}

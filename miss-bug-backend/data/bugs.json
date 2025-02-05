@@ -1,0 +1,51 @@
+[
+    {
+        "_id": "abc001",
+        "title": "Cannot save a new car",
+        "description": "Problem occurs when clicking Save",
+        "severity": 3,
+        "createdAt": 1696266941234
+    },
+    {
+        "_id": "abc002",
+        "title": "UI does not update",
+        "description": "Button does not respond to clicks",
+        "severity": 2,
+        "createdAt": 1694166941234
+    },
+    {
+        "_id": "abc003",
+        "title": "Error when deleting a user",
+        "description": "API returns 500 error",
+        "severity": 4,
+        "createdAt": 1689266941234
+    },
+    {
+        "_id": "abc005",
+        "title": "Timeout when connecting to the database",
+        "description": "Performance degraded under load",
+        "severity": 5,
+        "createdAt": 1697266942234
+    },
+    {
+        "_id": "abc006",
+        "title": "Validation errors not displayed",
+        "description": "Data sync issue observed",
+        "severity": 3,
+        "createdAt": 1691266941234
+    },
+    {
+        "_id": "abc007",
+        "title": "Memory leak detected",
+        "description": "Critical error during user registration",
+        "severity": 2,
+        "createdAt": 1692266941234
+    },
+    {
+        "_id": "abc008",
+        "title": "Login fails intermittently",
+        "description": "Unhandled exception in the console",
+        "severity": 4,
+        "createdAt": 1693366941234
+    }
+]

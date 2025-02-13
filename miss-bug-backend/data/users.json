@@ -1,0 +1,81 @@
+[
+    {
+        "_id": "u102",
+        "fullname": "Roni Cohen",
+        "username": "ronic",
+        "email": "roni.cohen@example.com",
+        "password": "hashed_password_2",
+        "createdAt": 1594166941234
+    },
+    {
+        "_id": "u103",
+        "fullname": "Avi Levi",
+        "username": "avi_levi",
+        "email": "avi.levi@example.com",
+        "password": "hashed_password_3",
+        "createdAt": 1611266941234
+    },
+    {
+        "_id": "u104",
+        "fullname": "Dana Bar",
+        "username": "danabar",
+        "email": "dana.bar@example.com",
+        "password": "hashed_password_4",
+        "createdAt": 1627266941234
+    },
+    {
+        "_id": "u105",
+        "fullname": "Neta Kim",
+        "username": "netakim",
+        "email": "neta.kim@example.com",
+        "password": "hashed_password_5",
+        "createdAt": 1642266941234
+    },
+    {
+        "_id": "u106",
+        "fullname": "Shay Tal",
+        "username": "shaytal",
+        "email": "shay.tal@example.com",
+        "password": "hashed_password_6",
+        "createdAt": 1657266941234
+    },
+    {
+        "_id": "u107",
+        "fullname": "Rami Eyal",
+        "username": "ramieyal",
+        "email": "rami.eyal@example.com",
+        "password": "hashed_password_7",
+        "createdAt": 1672266941234
+    },
+    {
+        "_id": "u108",
+        "fullname": "Tal Moran",
+        "username": "talmoran",
+        "email": "tal.moran@example.com",
+        "password": "hashed_password_8",
+        "createdAt": 1687266941234
+    },
+    {
+        "_id": "u109",
+        "fullname": "Gili Ron",
+        "username": "giliron",
+        "email": "gili.ron@example.com",
+        "password": "hashed_password_9",
+        "createdAt": 1702266941234
+    },
+    {
+        "_id": "u110",
+        "fullname": "Tamar Ilan",
+        "username": "tamarilan",
+        "email": "tamar.ilan@example.com",
+        "password": "hashed_password_10",
+        "createdAt": 1717266941234
+    },
+    {
+        "fullName": "asd",
+        "userName": "asd",
+        "password": "asdasd",
+        "_id": "Fy9xB",
+        "score": 100
+    }
+]

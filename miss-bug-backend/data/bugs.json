@@ -1,51 +1,82 @@
 [
     {
         "_id": "abc001",
-        "title": "Cannot save a new car",
-        "description": "Problem occurs when clicking Save",
+        "title": "Cannot save a Car",
+        "description": "Problem when clicking Save",
         "severity": 3,
-        "createdAt": 1696266941234
+        "createdAt": 1542107359454,
+        "labels": ["critical", "need-CR", "dev-branch"]
     },
     {
         "_id": "abc002",
         "title": "UI does not update",
         "description": "Button does not respond to clicks",
         "severity": 2,
-        "createdAt": 1694166941234
+        "createdAt": 1694166941234,
+        "labels": ["UI", "frontend", "in-progress"]
     },
     {
         "_id": "abc003",
         "title": "Error when deleting a user",
         "description": "API returns 500 error",
         "severity": 4,
-        "createdAt": 1689266941234
+        "createdAt": 1689266941234,
+        "labels": ["backend", "urgent", "blocker"]
+    },
+    {
+        "_id": "abc004",
+        "title": "Server crash on upload",
+        "description": "Unexpected behavior in production",
+        "severity": 1,
+        "createdAt": 1697266941234,
+        "labels": ["server", "critical", "dev-branch"]
     },
     {
         "_id": "abc005",
         "title": "Timeout when connecting to the database",
         "description": "Performance degraded under load",
         "severity": 5,
-        "createdAt": 1697266942234
+        "createdAt": 1697266942234,
+        "labels": ["database", "performance", "backend"]
     },
     {
         "_id": "abc006",
         "title": "Validation errors not displayed",
         "description": "Data sync issue observed",
         "severity": 3,
-        "createdAt": 1691266941234
+        "createdAt": 1691266941234,
+        "labels": ["frontend", "validation", "UI"]
     },
     {
         "_id": "abc007",
         "title": "Memory leak detected",
         "description": "Critical error during user registration",
         "severity": 2,
-        "createdAt": 1692266941234
+        "createdAt": 1692266941234,
+        "labels": ["performance", "backend", "critical"]
     },
     {
         "_id": "abc008",
         "title": "Login fails intermittently",
         "description": "Unhandled exception in the console",
         "severity": 4,
-        "createdAt": 1693366941234
+        "createdAt": 1693366941234,
+        "labels": ["login", "frontend", "bug"]
+    },
+    {
+        "_id": "abc009",
+        "title": "Search results are incorrect",
+        "description": "Page fails to load assets",
+        "severity": 5,
+        "createdAt": 1694266941234,
+        "labels": ["search", "frontend", "bug"]
+    },
+    {
+        "_id": "abc010",
+        "title": "Page crashes on mobile",
+        "description": "Functionality broken after recent update",
+        "severity": 1,
+        "createdAt": 1695266941234,
+        "labels": ["mobile", "critical", "frontend"]
     }
 ]

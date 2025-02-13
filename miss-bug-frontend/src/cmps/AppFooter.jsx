@@ -10,7 +10,7 @@ export function AppFooter () {
     return (
         <footer>
             <p>
-                coffeerights to all
+                @Ofir_Gady
             </p>
         </footer>
     )

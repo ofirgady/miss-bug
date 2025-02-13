@@ -1,27 +1,27 @@
-import { bugService } from '../services/bug.service.js'
+import { bugService } from '../services/bug'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { BugList } from '../cmps/BugList.jsx'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import { useEffect } from 'react'
 import { BugFilter } from '../cmps/BugFilter.jsx'
-import { useSearchParams } from 'react-router-dom'
+import { debounce } from '../services/util.service.js'
+import { BugSort } from '../cmps/BugSort.jsx'
 
 export function BugIndex() {
 	const [bugs, setBugs] = useState([])
-	const [searchParams, setSearchParams] = useSearchParams()
-	const defaultFilter = bugService.getFilterFromSearchParams(searchParams)
-	const [filterBy, setFilterBy] = useState(defaultFilter)
+	const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
+	const [sortBy, setSortBy] = useState(bugService.getDefaultSort())
+	const onSetFilterBy = useCallback(debounce(_onSetFilterBy, 350), [])
 
 	useEffect(() => {
 		loadBugs()
-		setSearchParams(filterBy)
-	}, [JSON.stringify(filterBy)])
+	}, [filterBy, sortBy])
 
 	async function loadBugs() {
-		console.log(filterBy)
+		// console.log(filterBy)
+		// console.log(sortBy)
 		try {
-			const bugs = await bugService.query(filterBy)
-			console.log('returned bugs:', bugs)
+			const bugs = await bugService.query(filterBy, sortBy)
 			setBugs(bugs)
 		} catch (error) {
 			console.log('error:', error)
@@ -29,9 +29,13 @@ export function BugIndex() {
 		}
 	}
 
-	function onSetFilterBy(filterBy) {
+	function _onSetFilterBy(filterBy) {
 		setFilterBy((prevFilter) => ({ ...prevFilter, ...filterBy }))
 	}
+	
+    function onSetSortBy(fieldsToUpdate) {
+        setSortBy(prevSortBy => ({ ...prevSortBy, ...fieldsToUpdate }))
+    }
 
 	async function onRemoveBug(bugId) {
 		try {
@@ -62,20 +66,6 @@ export function BugIndex() {
 		}
 	}
 
-	async function onCreateBugsPDF() {
-		// try {
-		// 	const blob = await bugService.createBugsPDF()
-		// 	const link = document.createElement('a')
-		// 	link.href = window.URL.createObjectURL(blob)
-		// 	link.download = 'bug_report.pdf'
-		// 	link.click()
-		// 	showSuccessMsg('Bugs PDF created')
-		// } catch (err) {
-		// 	console.log('Error from createBugsPDF ->', err)
-		// 	showErrorMsg('Cannot create PDF')
-		// }
-	}
-
 	async function onEditBug(bug) {
 		const severity = +prompt('New severity?')
 		const bugToSave = { ...bug, severity }
@@ -92,13 +82,32 @@ export function BugIndex() {
 		}
 	}
 
+	function onChangePageIdx(pageIdx) {
+		if (pageIdx < 0) return
+		setFilterBy((prevFilter) => ({ ...prevFilter, pageIdx }))
+	}
+
+	if (!bugs) return <div>Loading...</div>
+	const {pageIdx, ...restOfFilter} = filterBy
+	const isPaging = pageIdx !== undefined
+
 	return (
 		<main className='main-layout'>
 			<h3>Bugs App</h3>
 			<BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
+			<BugSort sortBy={sortBy} onSetSortBy={onSetSortBy} />
+			<div className="car-pagination">
+                <label> Use paging
+                    <input type="checkbox" checked={isPaging} onChange={() => onChangePageIdx(isPaging ? undefined : 0)} />
+                </label>
+                {isPaging && <>
+                    <button onClick={() => onChangePageIdx(pageIdx - 1)}>-</button>
+                    <span>{pageIdx + 1}</span>
+                    <button onClick={() => onChangePageIdx(pageIdx + 1)}>+</button>
+                </>}
+            </div>
 			<main>
 				<button onClick={onAddBug}>Add Bug</button>
-				<button onClick={onCreateBugsPDF}>Create Bugs PDF</button>
 				<BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
 			</main>
 		</main>

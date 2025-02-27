@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { bugService } from '../services/bug'
 import { showErrorMsg } from '../services/event-bus.service.js'
@@ -32,6 +31,9 @@ export function BugDetails() {
         <h4>{bug.title}</h4>
         <p>Severity: <span>{bug.severity}</span></p>
         <p>Description: <span>{bug.description}</span></p>
+        <p>Created At: <span>{new Date(bug.createdAt).toLocaleDateString()}</span></p>
+        <p>Updated At: <span>{new Date(bug.updatedAt).toLocaleDateString()}</span></p>
+        <p>Creator: <span>{bug.creator.fullname}</span></p>
         <Link to="/bug">Back to List</Link>
     </div>
 

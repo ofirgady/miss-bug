@@ -1,0 +1,18 @@
+.profile-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-page h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-page h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #555;
+}

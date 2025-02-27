@@ -46,9 +46,12 @@ function remove(bugId) {
 	return storageService.remove(STORAGE_KEY, bugId)
 }
 
-function save(bug) {
-	const method = bug._id ? 'put' : 'post'
-	return storageService[method](STORAGE_KEY, bug)
+function save(car) {
+	if (car._id) {
+		return storageService.put(CAR_KEY, car)
+	} else {
+		return storageService.post(CAR_KEY, car)
+	}
 }
 
 function getDefaultFilter() {

@@ -4,11 +4,12 @@ import { bugService } from "./bug.service.js"
 
 export async function getBugs(req, res) {
     try {
-        const {by, sortDir} = req.query.sortBy
+
         const filterBy = {
             title: req.query.filterBy.title,
             minSeverity: +req.query.filterBy.minSeverity,
-            labels: req.query.filterBy.labels
+            labels: req.query.filterBy.labels,
+            creatorId: req.query.filterBy.creatorId,
         }
 
         if (req.query.pageIdx) filterBy.pageIdx = +pageIdx;
@@ -45,33 +46,37 @@ export async function getBug(req, res) {
 }
 
 export async function addBug(req, res) {
-    const {title, severity } = req.body
-        const bugToSave = { title, severity: +severity }
-        try {
-            const savedBug = await bugService.save(bugToSave)
-            res.send(savedBug)
-        } catch (err) {
-            loggerService.error(err.message)
-            res.status(400).send(`Couldn't save bug`)
-        }
+    const loggedinUser = req.loggedinUser
+
+    const { title, description, severity } = req.body
+    const bugToSave = { title, description, severity: +severity, creator: { _id: req.loggedinUser._id , fullname: req.loggedinUser.fullname} }
+    try {
+        const savedBug = await bugService.save(bugToSave, loggedinUser)
+        res.send(savedBug)
+    } catch (err) {
+        loggerService.error(err.message)
+        res.status(400).send(`Failed to add bug`)
+    }
 }
 
 export async function updateBug(req, res) {
-    const { _id, title, severity } = req.body
-        const bugToSave = { _id, title, severity: +severity }
-        try {
-            const savedBug = await bugService.save(bugToSave)
-            res.send(savedBug)
-        } catch (err) {
-            loggerService.error(err.message)
-            res.status(400).send(`Couldn't save bug`)
-        }
+    const loggedinUser = req.loggedinUser
+
+    const { _id, title, description, severity } = req.body
+    const bugToSave = { _id, title, description, severity: +severity, creator: { _id: req.loggedinUser._id , fullname: req.loggedinUser.fullname} }
+    try {
+        const savedBug = await bugService.save(bugToSave, loggedinUser)
+        res.send(savedBug)
+    } catch (err) {
+        loggerService.error(err.message)
+        res.status(400).send(`Couldn't save bug`)
+    }
 }
 
 export async function removeBug(req, res) {
     const { bugId } = req.params
 	try {
-		await bugService.remove(bugId)
+		await bugService.remove(bugId, req.loggedinUser)
 		res.send('Bug Deleted')
 	} catch (err) {
 		loggerService.error(err.message)

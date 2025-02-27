@@ -8,6 +8,7 @@ export async function getUsers(req, res) {
             txt: req.query.txt,
         }
         const users = await userService.query(filterBy)
+        {}
         res.send(users)
     } catch (err) {
         loggerService.error(err.message)
@@ -27,8 +28,8 @@ export async function getUser(req, res) {
 }
 
 export async function addUser(req, res) {
-    const {fullName, userName, password } = req.body
-        const userToSave = { fullName, userName, password }
+    const {fullname, username, password } = req.body
+        const userToSave = { fullname, username, password }
         try {
             const savedUser = await userService.save(userToSave)
             res.send(savedUser)
@@ -39,8 +40,8 @@ export async function addUser(req, res) {
 }
 
 export async function updateUser(req, res) {
-    const { _id, fullName, userName, password } = req.body
-        const userToSave = { _id, fullName, userName, password }
+    const { _id, fullname, username, password } = req.body
+        const userToSave = { _id, fullname, username, password }
         try {
             const savedUser = await userService.save(userToSave)
             res.send(savedUser)

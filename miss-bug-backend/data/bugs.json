@@ -1,82 +1,190 @@
 [
     {
-        "_id": "abc001",
-        "title": "Cannot save a Car",
-        "description": "Problem when clicking Save",
+        "_id": "b001",
+        "title": "Payment Save Failure",
+        "description": "Receiving a 500 server error when attempting to save invoice payments.",
         "severity": 3,
-        "createdAt": 1542107359454,
-        "labels": ["critical", "need-CR", "dev-branch"]
+        "createdAt": 1662107359454,
+        "labels": [
+            "backend",
+            "urgent",
+            "blocker"
+        ],
+        "creator": {
+            "_id": "u101",
+            "fullname": "Alice Brown"
+        }
     },
     {
-        "_id": "abc002",
-        "title": "UI does not update",
-        "description": "Button does not respond to clicks",
+        "_id": "b002",
+        "title": "Mobile Layout Overlap",
+        "description": "Footer overlaps form fields on Safari iOS, making them unclickable.",
         "severity": 2,
-        "createdAt": 1694166941234,
-        "labels": ["UI", "frontend", "in-progress"]
+        "createdAt": 1663207459454,
+        "labels": [
+            "frontend",
+            "mobile",
+            "ui"
+        ],
+        "creator": {
+            "_id": "u102",
+            "fullname": "Bob Johnson"
+        }
     },
     {
-        "_id": "abc003",
-        "title": "Error when deleting a user",
-        "description": "API returns 500 error",
-        "severity": 4,
-        "createdAt": 1689266941234,
-        "labels": ["backend", "urgent", "blocker"]
+        "_id": "b003",
+        "title": "Missing Translation Strings",
+        "description": "Several buttons display 'undefined' in French locale.",
+        "severity": 2,
+        "createdAt": 1665807359454,
+        "labels": [
+            "frontend",
+            "i18n",
+            "minor"
+        ],
+        "creator": {
+            "_id": "u103",
+            "fullname": "Camille Dupont"
+        }
     },
     {
-        "_id": "abc004",
-        "title": "Server crash on upload",
-        "description": "Unexpected behavior in production",
-        "severity": 1,
-        "createdAt": 1697266941234,
-        "labels": ["server", "critical", "dev-branch"]
-    },
-    {
-        "_id": "abc005",
-        "title": "Timeout when connecting to the database",
-        "description": "Performance degraded under load",
-        "severity": 5,
-        "createdAt": 1697266942234,
-        "labels": ["database", "performance", "backend"]
-    },
-    {
-        "_id": "abc006",
-        "title": "Validation errors not displayed",
-        "description": "Data sync issue observed",
+        "_id": "b004",
+        "title": "Image Upload Hangs",
+        "description": "Progress bar freezes at 90% when uploading large files.",
         "severity": 3,
-        "createdAt": 1691266941234,
-        "labels": ["frontend", "validation", "UI"]
+        "createdAt": 1667107359454,
+        "labels": [
+            "backend",
+            "file-upload",
+            "bug"
+        ],
+        "creator": {
+            "_id": "u104",
+            "fullname": "David Smith"
+        }
     },
     {
-        "_id": "abc007",
-        "title": "Memory leak detected",
-        "description": "Critical error during user registration",
+        "_id": "b005",
+        "title": "Notifications Not Sent",
+        "description": "Email notifications fail to send when multiple recipients are added.",
+        "severity": 3,
+        "createdAt": 1668107359454,
+        "labels": [
+            "backend",
+            "notifications",
+            "urgent"
+        ],
+        "creator": {
+            "_id": "u101",
+            "fullname": "Alice Brown"
+        }
+    },
+    {
+        "_id": "b006",
+        "title": "Search Results Empty",
+        "description": "Searching for existing items returns no results intermittently.",
         "severity": 2,
-        "createdAt": 1692266941234,
-        "labels": ["performance", "backend", "critical"]
+        "createdAt": 1669107359454,
+        "labels": [
+            "backend",
+            "search",
+            "high-priority"
+        ],
+        "creator": {
+            "_id": "u105",
+            "fullname": "Evelyn Lee"
+        }
     },
     {
-        "_id": "abc008",
-        "title": "Login fails intermittently",
-        "description": "Unhandled exception in the console",
-        "severity": 4,
-        "createdAt": 1693366941234,
-        "labels": ["login", "frontend", "bug"]
+        "_id": "b007",
+        "title": "Slow Dashboard Loading",
+        "description": "Dashboard takes over 10 seconds to load under normal traffic conditions.",
+        "severity": 2,
+        "createdAt": 1670107359454,
+        "labels": [
+            "performance",
+            "frontend",
+            "ui"
+        ],
+        "creator": {
+            "_id": "u106",
+            "fullname": "Fernando Garcia"
+        }
     },
     {
-        "_id": "abc009",
-        "title": "Search results are incorrect",
-        "description": "Page fails to load assets",
-        "severity": 5,
-        "createdAt": 1694266941234,
-        "labels": ["search", "frontend", "bug"]
+        "_id": "b008",
+        "title": "Incorrect User Role Assignment",
+        "description": "Newly registered users are sometimes assigned admin privileges by mistake.",
+        "severity": 3,
+        "createdAt": 1671107359454,
+        "labels": [
+            "backend",
+            "security",
+            "blocker"
+        ],
+        "creator": {
+            "_id": "u104",
+            "fullname": "David Smith"
+        }
     },
     {
-        "_id": "abc010",
-        "title": "Page crashes on mobile",
-        "description": "Functionality broken after recent update",
-        "severity": 1,
-        "createdAt": 1695266941234,
-        "labels": ["mobile", "critical", "frontend"]
+        "_id": "b009",
+        "title": "Autosave Not Triggering",
+        "description": "Changes in text fields aren't being saved automatically in the background.",
+        "severity": 9,
+        "createdAt": 1672107359454,
+        "labels": [
+            "frontend",
+            "minor",
+            "ux"
+        ],
+        "creator": {
+            "_id": "u107",
+            "fullname": "Grace Huang"
+        }
+    },
+    {
+        "title": "hui",
+        "description": "joijoij",
+        "severity": 7,
+        "_id": "e2NPh",
+        "createdAt": 1740651467421,
+        "labels": [],
+        "creator": {
+            "fullname": "oo"
+        }
+    },
+    {
+        "title": "fsdf",
+        "description": "fdsfsd",
+        "severity": 2222,
+        "_id": "TNBxP",
+        "createdAt": 1740652568268,
+        "labels": [],
+        "creator": {
+            "fullname": "oo"
+        }
+    },
+    {
+        "title": "sdfsdf",
+        "description": "sdfsdfsdf",
+        "severity": 33,
+        "_id": "0BEWm",
+        "createdAt": 1740653248472,
+        "labels": [],
+        "creator": {
+            "_id": "c5rXc",
+            "fullname": "oo"
+        }
+    },
+    {
+        "severity": 0,
+        "creator": {
+            "_id": "c5rXc",
+            "fullname": "oo"
+        },
+        "_id": "rgFTw",
+        "createdAt": 1740653887493,
+        "labels": []
     }
 ]

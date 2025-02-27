@@ -19,3 +19,6 @@
 @import "cmps/BugPreview.css";
 @import "cmps/BugDetails.css";
 @import "cmps/BugFilter.css";
+
+/* Pages */
+@import "pages/profile.css";

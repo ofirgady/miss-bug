@@ -1,81 +1,82 @@
 [
     {
+        "_id": "u101",
+        "fullname": "Alice Brown",
+        "username": "aliceb",
+        "password": "Alice123!",
+        "score": 120,
+        "isAdmin": false
+    },
+    {
         "_id": "u102",
-        "fullname": "Roni Cohen",
-        "username": "ronic",
-        "email": "roni.cohen@example.com",
-        "password": "hashed_password_2",
-        "createdAt": 1594166941234
+        "fullname": "Bob Johnson",
+        "username": "bobj",
+        "password": "BobSecure1",
+        "score": 85,
+        "isAdmin": false
     },
     {
         "_id": "u103",
-        "fullname": "Avi Levi",
-        "username": "avi_levi",
-        "email": "avi.levi@example.com",
-        "password": "hashed_password_3",
-        "createdAt": 1611266941234
+        "fullname": "Camille Dupont",
+        "username": "camilleD",
+        "password": "Camille@321",
+        "score": 104,
+        "isAdmin": false
     },
     {
         "_id": "u104",
-        "fullname": "Dana Bar",
-        "username": "danabar",
-        "email": "dana.bar@example.com",
-        "password": "hashed_password_4",
-        "createdAt": 1627266941234
+        "fullname": "David Smith",
+        "username": "dsmith",
+        "password": "Dav!dPass9",
+        "score": 143,
+        "isAdmin": false
     },
     {
         "_id": "u105",
-        "fullname": "Neta Kim",
-        "username": "netakim",
-        "email": "neta.kim@example.com",
-        "password": "hashed_password_5",
-        "createdAt": 1642266941234
+        "fullname": "Evelyn Lee",
+        "username": "evelynlee",
+        "password": "EveSecure123",
+        "score": 92,
+        "isAdmin": false
     },
     {
         "_id": "u106",
-        "fullname": "Shay Tal",
-        "username": "shaytal",
-        "email": "shay.tal@example.com",
-        "password": "hashed_password_6",
-        "createdAt": 1657266941234
+        "fullname": "Fernando Garcia",
+        "username": "ferGar",
+        "password": "F3rn@ndo!",
+        "score": 76,
+        "isAdmin": false
     },
     {
         "_id": "u107",
-        "fullname": "Rami Eyal",
-        "username": "ramieyal",
-        "email": "rami.eyal@example.com",
-        "password": "hashed_password_7",
-        "createdAt": 1672266941234
+        "fullname": "Grace Huang",
+        "username": "graceH",
+        "password": "GhPass889",
+        "score": 110,
+        "isAdmin": false
     },
     {
         "_id": "u108",
-        "fullname": "Tal Moran",
-        "username": "talmoran",
-        "email": "tal.moran@example.com",
-        "password": "hashed_password_8",
-        "createdAt": 1687266941234
+        "fullname": "Hiro Tanaka",
+        "username": "hiro_t",
+        "password": "T@naka2022",
+        "score": 97,
+        "isAdmin": false
     },
     {
-        "_id": "u109",
-        "fullname": "Gili Ron",
-        "username": "giliron",
-        "email": "gili.ron@example.com",
-        "password": "hashed_password_9",
-        "createdAt": 1702266941234
+        "username": "oo",
+        "password": "$2b$10$/YUd0s69Qh08lkEvLrJAMO31pvT6DOdY8b8GheI.YCy1Jdl29uJTW",
+        "fullname": "oo",
+        "_id": "c5rXc",
+        "score": 1000,
+        "isAdmin": true
     },
     {
-        "_id": "u110",
-        "fullname": "Tamar Ilan",
-        "username": "tamarilan",
-        "email": "tamar.ilan@example.com",
-        "password": "hashed_password_10",
-        "createdAt": 1717266941234
-    },
-    {
-        "fullName": "asd",
-        "userName": "asd",
-        "password": "asdasd",
-        "_id": "Fy9xB",
-        "score": 100
+        "username": "tt",
+        "password": "$2b$10$/Ty9hfVt8jK9/OQsvqWQoeWmyYuWNlpt9.dY6UsJsjvPAQUyNhsV6",
+        "fullname": "tt",
+        "_id": "nB4he",
+        "score": 1000,
+        "isAdmin": false
     }
 ]

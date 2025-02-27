@@ -18,8 +18,6 @@ export function BugIndex() {
 	}, [filterBy, sortBy])
 
 	async function loadBugs() {
-		// console.log(filterBy)
-		// console.log(sortBy)
 		try {
 			const bugs = await bugService.query(filterBy, sortBy)
 			setBugs(bugs)
@@ -57,7 +55,6 @@ export function BugIndex() {
 		}
 		try {
 			const savedBug = await bugService.save(bug)
-			console.log('Added Bug', savedBug)
 			setBugs((prevBugs) => [...prevBugs, savedBug])
 			showSuccessMsg('Bug added')
 		} catch (err) {
@@ -72,7 +69,6 @@ export function BugIndex() {
 		bugToSave = { ...bugToSave, severity}
 		try {
 			const savedBug = await bugService.save(bugToSave)
-			console.log('Updated Bug:', savedBug)
 			setBugs((prevBugs) =>
 				prevBugs.map((currBug) => (currBug._id === savedBug._id ? savedBug : currBug))
 			)

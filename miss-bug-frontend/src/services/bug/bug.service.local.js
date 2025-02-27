@@ -29,7 +29,6 @@ async function query(filterBy = {}) {
 			bugsToDisplay = bugsToDisplay.slice(startIdx, startIdx + PAGE_SIZE)
 		}
 
-		console.log('bugs:', bugsToDisplay )
 
 		return bugsToDisplay
 	} catch (err) {

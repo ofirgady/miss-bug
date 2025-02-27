@@ -30,9 +30,7 @@ window.userService = userService
 
 async function getUsers() {
     try {
-        console.log('Fetching users from backend');
         const { data: users } = await axios.get(BASE_USER_URL)
-        console.log('Users:', users);
         return users
     } catch (err) {
         console.error('Failed to get users', err)
@@ -89,9 +87,7 @@ async function login(credentials) {
 
 async function signup(credentials) {
     try {
-        console.log('Signing up user:', credentials);
         const { data: user } = await axios.post(BASE_AUTH_URL + 'signup', credentials)
-        console.log('User signed up:', user);
         return saveLocalUser(user)
     } catch (err) {
         console.error('Failed to signup', err)

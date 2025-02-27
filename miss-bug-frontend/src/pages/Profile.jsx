@@ -29,7 +29,6 @@ export function Profile() {
 		try {
 			const bugs = await bugService.query({ creatorId: userId })
 			setBugs(bugs)
-			console.log("🚀 ~ loadBugs ~ bugs:", bugs)
 		} catch (error) {
 			console.log('error:', error)
 			showErrorMsg('Problems getting bugs:', error)
@@ -53,7 +52,6 @@ export function Profile() {
 		const bugToSave = { ...bug, severity }
 		try {
 			const savedBug = await bugService.save(bugToSave)
-			console.log('Updated Bug:', savedBug)
 			setBugs((prevBugs) =>
 				prevBugs.map((currBug) => (currBug._id === savedBug._id ? savedBug : currBug))
 			)
